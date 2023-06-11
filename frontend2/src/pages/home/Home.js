@@ -16,29 +16,38 @@ function Home() {
 
   const [listOfEmployees, setListOfEmployees] = useState([]);
   useEffect(() => {
-      axios.get("http://localhost:3005/employeeinfo").then((response) => {
+    axios
+      .get("https://vercel-frontend-nine.vercel.app/employeeinfo")
+      .then((response) => {
         setListOfEmployees(response.data);
       });
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3005/employeeinfo").then((response) => {
-      const sortedEmployees = response.data.sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
-      setListOfEmployees(sortedEmployees);
-    });
+    axios
+      .get("https://vercel-frontend-nine.vercel.app/employeeinfo")
+      .then((response) => {
+        const sortedEmployees = response.data.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+        setListOfEmployees(sortedEmployees);
+      });
   }, []);
 
   return (
     <div>
-    <h1>Funcionários</h1>
+      <h1>Funcionários</h1>
       {listOfEmployees.map((value, key) => {
         return (
-          <div className="card" onClick={() => {navigateTo(`/employee/${value.id}`);}}>
+          <div
+            className="card"
+            onClick={() => {
+              navigateTo(`/employee/${value.id}`);
+            }}
+          >
             <div className="name">Nome: {value.name}</div>
             <div className="cpf">CPF: {value.cpf}</div>
-            <br/>
+            <br />
           </div>
         );
       })}

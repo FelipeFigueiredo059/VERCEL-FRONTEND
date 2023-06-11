@@ -60,7 +60,7 @@ const Register = () => {
     }
 
     axios
-      .post("http://localhost:3005/employeeinfo", data, {
+      .post("https://vercel-frontend-nine.vercel.app/employeeinfo", data, {
         headers: {
           Authorization: "Bearer " + accessToken,
         },
@@ -95,68 +95,66 @@ const Register = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={onSubmit}
-            validationSchema={validationSchema}>
-
+            validationSchema={validationSchema}
+          >
             <Form className="formContainer">
               <div className="left-card">
-
                 <Field
                   id="inputCreatePost"
                   name="name"
-                  placeholder="Nome completo"/>
-                <ErrorMessage name="name" component="span"/>
+                  placeholder="Nome completo"
+                />
+                <ErrorMessage name="name" component="span" />
 
-                <Field 
-                  id="inputCreatePost" 
-                  name="cpf" 
-                  placeholder="CPF"/>
-                <ErrorMessage name="cpf" component="span"/>
+                <Field id="inputCreatePost" name="cpf" placeholder="CPF" />
+                <ErrorMessage name="cpf" component="span" />
 
-                <Field 
-                  id="inputCreatePost" 
-                  name="email" 
-                  placeholder="Email"/>
-                <ErrorMessage name="email" component="span"/>
+                <Field id="inputCreatePost" name="email" placeholder="Email" />
+                <ErrorMessage name="email" component="span" />
 
                 <Field
                   id="inputCreatePost"
                   name="address"
-                  placeholder="Endereço"/>
-                <ErrorMessage name="address" component="span"/>
-
+                  placeholder="Endereço"
+                />
+                <ErrorMessage name="address" component="span" />
               </div>
 
               <div className="right-card">
-                
                 <Field
                   id="inputCreatePost"
                   name="phonenumber"
-                  placeholder="Telefone"/>
-                <ErrorMessage name="phonenumber" component="span"/>
+                  placeholder="Telefone"
+                />
+                <ErrorMessage name="phonenumber" component="span" />
 
                 <Field
                   id="inputCreatePost"
                   name="birthday"
-                  placeholder="Data de nascimento"/>
-                <ErrorMessage name="birthday" component="span"/>
+                  placeholder="Data de nascimento"
+                />
+                <ErrorMessage name="birthday" component="span" />
 
                 <Field
                   id="inputCreatePost"
                   name="admissiondate"
-                  placeholder="Data de admissão"/>
-                <ErrorMessage name="admissiondate" component="span"/>
+                  placeholder="Data de admissão"
+                />
+                <ErrorMessage name="admissiondate" component="span" />
 
                 <Field
                   id="inputCreatePost"
                   name="asodate"
-                  placeholder="Data de ASO"/>
-                <ErrorMessage name="asodate" component="span"/>
-
+                  placeholder="Data de ASO"
+                />
+                <ErrorMessage name="asodate" component="span" />
               </div>
             </Form>
           </Formik>
         </div>
-        <button type="submit" className="cadastrar">Cadastrar</button>
+        <button type="submit" className="cadastrar">
+          Cadastrar
+        </button>
       </div>
     </div>
   );
