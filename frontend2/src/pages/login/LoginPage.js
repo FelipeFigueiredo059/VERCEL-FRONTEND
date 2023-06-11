@@ -19,7 +19,7 @@ function LoginPage() {
     e.preventDefault();
     const data = { email: email, password: password };
     axios
-      .post("https://vercel-frontend-nine.vercel.app/auth/login", data)
+      .post("https://vercer-backend.vercel.app/auth/login", data)
       .then((response) => {
         if (response.data.error) {
           alert(response.data.error);

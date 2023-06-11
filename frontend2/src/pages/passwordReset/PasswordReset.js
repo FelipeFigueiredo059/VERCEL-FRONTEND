@@ -14,7 +14,7 @@ const PasswordReset = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const url = `https://vercel-frontend-nine.vercel.app/api/password-reset/${param.id}/${param.token}`;
+  const url = `https://vercer-backend.vercel.app/api/password-reset/${param.id}/${param.token}`;
 
   useEffect(() => {
     const verifyUrl = async () => {

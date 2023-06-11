@@ -17,7 +17,7 @@ function Home() {
   const [listOfEmployees, setListOfEmployees] = useState([]);
   useEffect(() => {
     axios
-      .get("https://vercel-frontend-nine.vercel.app/employeeinfo")
+      .get("https://vercer-backend.vercel.app/employeeinfo")
       .then((response) => {
         setListOfEmployees(response.data);
       });
@@ -25,7 +25,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("https://vercel-frontend-nine.vercel.app/employeeinfo")
+      .get("https://vercer-backend.vercel.app/employeeinfo")
       .then((response) => {
         const sortedEmployees = response.data.sort((a, b) =>
           a.name.localeCompare(b.name)

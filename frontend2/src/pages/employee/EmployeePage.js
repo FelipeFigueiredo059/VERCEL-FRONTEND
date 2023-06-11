@@ -9,7 +9,7 @@ function EmployeePage() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`https://vercel-frontend-nine.vercel.app/employeeinfo/byId/${id}`)
+        .get(`https://vercer-backend.vercel.app/employeeinfo/byId/${id}`)
         .then((response) => {
           setEmployeeObject(response.data);
         });

@@ -12,7 +12,7 @@ function Password() {
   const enviarEmail = async (e) => {
     e.preventDefault();
     try {
-      const url = `https://vercel-frontend-nine.vercel.app/api/password-reset`;
+      const url = `https://vercer-backend.vercel.app/api/password-reset`;
       const { data } = await axios.post(url, { email });
       setMsg(data.message);
       setError("");
